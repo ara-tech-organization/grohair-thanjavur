@@ -39,13 +39,15 @@
          async
          src="https://www.googletagmanager.com/gtag/js?id=AW-16684090932"
          ></script>
+
+         
       <script>
          window.dataLayer = window.dataLayer || [];
          function gtag() {
            dataLayer.push(arguments);
          }
          gtag("js", new Date());
-         
+
          gtag("config", "AW-16684090932");
       </script>
       <!-- Google tag (gtag.js) -->
@@ -54,7 +56,7 @@
          window.dataLayer = window.dataLayer || [];
          function gtag(){dataLayer.push(arguments);}
          gtag('js', new Date());
-         
+
          gtag('config', 'G-WXXHQHEZMK');
       </script>
       <!-- Clarity tag (gtag.js) -->
@@ -1526,18 +1528,18 @@
              submitBtn.disabled = true;
              submitBtn.innerText = "Please Wait...";
            });
-         
+
          document.addEventListener("DOMContentLoaded", function () {
            let now = new Date();
-         
+
            // Format date as YYYY-MM-DD
            let dateStr = now.toISOString().split("T")[0];
-         
+
            // Format time as HH:MM
            let hours = now.getHours().toString().padStart(2, "0");
            let minutes = now.getMinutes().toString().padStart(2, "0");
            let timeStr = `${hours}:${minutes}`;
-         
+
            // Set default values
            document.querySelector('input[name="date"]').value = dateStr;
            document.querySelector('input[name="time"]').value = timeStr;
@@ -1552,14 +1554,14 @@
          }
          });
          });
-         
+
          // Select all FAQ toggles
          document.querySelectorAll(".faq-toggle").forEach((button) => {
          button.addEventListener("click", function () {
          let header = this.parentElement;
          let icon = this.querySelector("i");
          let targetId = this.getAttribute("data-bs-target").substring(1); // Get the target element ID
-         
+
          // Remove active class from all headers and collapse others
          document.querySelectorAll(".faq-header").forEach((item) => {
          if (item !== header) {
@@ -1568,10 +1570,10 @@
          item.querySelector("i").classList.add("fa-chevron-down");
          }
          });
-         
+
          // Toggle active class for the clicked one
          header.classList.toggle("active");
-         
+
          // Toggle icon between up and down
          if (header.classList.contains("active")) {
          icon.classList.remove("fa-chevron-down");
@@ -1580,7 +1582,7 @@
          icon.classList.remove("fa-chevron-up");
          icon.classList.add("fa-chevron-down");
          }
-         
+
          // Show or hide the target content based on the toggle state
          const targetElement = document.getElementById(targetId);
          if (targetElement.classList.contains("collapse")) {

@@ -12196,7 +12196,7 @@ pre code {
 }
 
 .form-control::placeholder {
-  color: #ccc;
+  color: grey;
   opacity: 1;
 }
 
@@ -20444,25 +20444,27 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  
-  
+
+
 }
 
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  
-  
+
+
 }
 
 
 
 @media (min-width: 481px) and (max-width: 767px) {
-  
-  
+
+
 }
 
 
 @media (min-width: 320px) and (max-width: 480px) {
-  
-  
+
+
 }
+
+

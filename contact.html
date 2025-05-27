@@ -15,6 +15,7 @@
          />
       <meta content="width=device-width, initial-scale=1.0" name="viewport" />
       <!-- Favicon -->
+           <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
       <link href="img/hair.png" rel="icon" />
       <!-- Google Web Fonts -->
       <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -48,7 +49,7 @@
            dataLayer.push(arguments);
          }
          gtag("js", new Date());
-         
+
          gtag("config", "AW-16684090932");
       </script>
       <!-- Google tag (gtag.js) -->
@@ -57,7 +58,7 @@
          window.dataLayer = window.dataLayer || [];
          function gtag(){dataLayer.push(arguments);}
          gtag('js', new Date());
-         
+
          gtag('config', 'G-WXXHQHEZMK');
       </script>
       <script type="text/javascript">
@@ -229,59 +230,43 @@
                      </h6>
                      <h2 class="mb-4">Contact For Any Query</h2>
                      <div id="success"></div>
-                     <form action="contact.php" method="POST" id="contactForm">
-                        <div class="form-row">
-                           <div class="col-sm-6 control-group">
-                              <input
-                                 type="text"
-                                 name="name"
-                                 class="form-control border-0 p-4"
-                                 placeholder="Your Name"
-                                 required
-                                 style="color: #000 !important"
-                                 />
-                           </div>
-                           <div class="col-sm-6 control-group">
-                              <input
-                                 type="text"
-                                 name="phone"
-                                 class="form-control border-0 p-4"
-                                 placeholder="Your Phone"
-                                 required
-                                 style="color: #000 !important"
-                                 />
-                           </div>
-                        </div>
-                        <div class="control-group">
-                           <input
-                              type="text"
-                              name="subject"
-                              class="form-control border-0 p-4"
-                              placeholder="Subject"
-                              required
-                              style="color: #000 !important"
-                              />
-                        </div>
-                        <div class="control-group">
-                           <textarea
-                              name="message"
-                              class="form-control border-0 py-3 px-4"
-                              rows="3"
-                              placeholder="Message"
-                              required
-                              style="color: #000 !important"
-                              ></textarea>
-                        </div>
-                        <div>
-                           <button
-                              class="btn btn-primary py-3 px-4"
-                              type="submit"
-                              id="submitBtn"
-                              >
-                           Send Message
-                           </button>
-                        </div>
-                     </form>
+                     <form id="appointmentForm">
+            <div class="form-row">
+              <div class="col-sm-6">
+                <input type="text" name="name" class="form-control bg-transparent p-4" style="height: 47px; color: #4b4b4b !important" placeholder="Your Name" required />
+              </div>
+              <div class="col-sm-6">
+                <input type="email" name="email" class="form-control bg-transparent p-4" style="height: 47px; color: #4b4b4b" placeholder="Your Email" required />
+              </div>
+            </div>
+            <div class="form-row mt-3">
+              <div class="col-sm-6">
+                <input type="text" name="phone" class="form-control bg-transparent p-4" style="height: 47px; color: #4b4b4b" placeholder="Your Phone Number" required />
+              </div>
+              <div class="col-sm-6">
+                <input type="date" name="date" class="form-control bg-transparent p-4" style="height: 47px; color: grey !important" required />
+              </div>
+            </div>
+            <div class="form-row mt-3">
+              <div class="col-sm-6">
+                <input type="time" name="time" class="form-control bg-transparent p-4" style="height: 47px; color: grey !important" required />
+              </div>
+              <div class="col-sm-6">
+                <select name="service" id="service" class="custom-select bg-transparent px-4" style="height: 47px; color: gray" required>
+                  <option value="" disabled selected>Select Treatment</option>
+                  <option style="color: black;" value="Hair Treatment">Hair Treatment</option>
+                  <option style="color: black;" value="Skin Treatment">Skin Treatment</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row mt-4">
+              <div class="col-sm-6">
+                <button class="btn btn-primary btn-block" type="submit" id="submitBtn" style="height: 47px">
+                  Book Appointment
+                </button>
+              </div>
+            </div>
+          </form>
                   </div>
                </div>
             </div>
@@ -440,7 +425,7 @@
                />
          </svg>
       </a>
-      <script>
+      <!-- <script>
          document
            .getElementById("contactForm")
            .addEventListener("submit", function () {
@@ -448,7 +433,110 @@
              submitBtn.disabled = true;
              submitBtn.innerText = "Please Wait...";
            });
-      </script>
+      </script> -->
+
+      <script>
+  document.getElementById("appointmentForm").addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const submitBtn = document.getElementById("submitBtn");
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Please wait...";
+
+    const name = document.querySelector('input[name="name"]').value.trim();
+    const email = document.querySelector('input[name="email"]').value.trim();
+    const mobile = document.querySelector('input[name="phone"]').value.trim();
+    const date = document.querySelector('input[name="date"]').value.trim();
+    const time = document.querySelector('input[name="time"]').value.trim();
+    const treatment = document.querySelector('select[name="service"]').value;
+
+    const formData = { name, email, mobile, date, time, treatment };
+
+    console.log("📦 Sending this data:", formData);
+
+    try {
+      const res = await fetch("https://schoolcommunication-gmdtekepd3g3ffb9.canadacentral-01.azurewebsites.net/api/postMSMSForm/growAndGlowNewForm", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": "Bearer 123"
+        },
+        body: JSON.stringify(formData)
+      });
+
+      const result = await res.json();
+      console.log("📨 Server says:", result);
+
+      if (!result.error) {
+        Toastify({
+          text: "✅ Email sent successfully!",
+          duration: 4000,
+          gravity: "top",
+          position: "center",
+          backgroundColor: "#28a745",
+          stopOnFocus: true
+        }).showToast();
+
+          setTimeout(() => {
+    window.location.href = "/Thankyou.html";
+  }, 3000);
+
+        document.getElementById("appointmentForm").reset();
+      } else {
+        Toastify({
+          text: `⚠️ ${result.message}`,
+          duration: 4000,
+          gravity: "top",
+          position: "center",
+          backgroundColor: "#dc3545",
+          stopOnFocus: true
+        }).showToast();
+      }
+    } catch (error) {
+      console.error("❌ Error occurred:", error);
+      Toastify({
+        text: "Network error. Try again later.",
+        duration: 4000,
+        gravity: "top",
+        position: "center",
+        backgroundColor: "#dc3545",
+        stopOnFocus: true
+      }).showToast();
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Book Appointment";
+    }
+  });
+</script>
+
+
+
+    <script>
+
+      document
+        .getElementById("appointmentForm")
+        .addEventListener("submit", function () {
+          var submitBtn = document.getElementById("submitBtn");
+          submitBtn.disabled = true;
+          submitBtn.innerText = "Please Wait...";
+        });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        let now = new Date();
+
+        // Format date as YYYY-MM-DD
+        let dateStr = now.toISOString().split("T")[0];
+
+        // Format time as HH:MM
+        let hours = now.getHours().toString().padStart(2, "0");
+        let minutes = now.getMinutes().toString().padStart(2, "0");
+        let timeStr = `${hours}:${minutes}`;
+
+        // Set default values
+        document.querySelector('input[name="date"]').value = dateStr;
+        document.querySelector('input[name="time"]').value = timeStr;
+      });
+    </script>
       <!-- JavaScript Libraries -->
       <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
@@ -465,6 +553,7 @@
       <!-- Template Javascript -->
       <script src="js/main.js"></script>
       <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
       <script>
         AOS.init();
       </script>
