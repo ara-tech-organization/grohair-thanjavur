@@ -20468,3 +20468,428 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 }
 
 
+
+/* HT Section */
+.ht-section {
+  padding: 10px 20px;
+  background-color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ec2024;
+}
+
+.intro-text {
+  font-size: 1.1rem;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+  line-height: 1.6;
+  color: #555;
+}
+
+.treatment-heading {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #0a3d62;
+  text-align: center;
+}
+
+/* Treatment Boxes */
+.treatment-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.treatment-box.reverse {
+  flex-direction: row-reverse;
+}
+
+.treatment-image {
+  flex: 1 1 300px;
+}
+
+.treatment-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.treatment-content {
+  flex: 2;
+}
+
+.treatment-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #1e272e;
+}
+
+.treatment-content ul {
+  list-style: disc;
+  padding-left: 20px;
+  line-height: 1.6;
+}
+
+.treatment-content ul li {
+  margin-bottom: 10px;
+  color: #444;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .treatment-box,
+  .treatment-box.reverse {
+    flex-direction: column;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .treatment-content h3 {
+    font-size: 1.3rem;
+  }
+}
+
+
+/* Emi And Offers */
+.highlight-section {
+  padding: 60px 20px;
+  background-color: #fff;
+  text-align: center;
+  color: #1e272e;
+}
+
+.highlight-title {
+  font-size: 1.7rem;
+  margin-bottom: 30px;
+  color: #ec2024;
+}
+
+.highlight-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.highlight-card {
+  background: #f8f8f8;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.highlight-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+.highlight-card h4 {
+  color: #ec2024;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.highlight-card ul {
+  list-style: disc inside;
+  padding-left: 0;
+  margin: 0;
+}
+
+.highlight-card li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.treatment-carousel-section {
+  padding: 60px 0;
+  background: #fff;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.treatment-carousel .item img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.treatment-carousel .item img:hover {
+  transform: scale(1.05);
+}
+
+/* Owl Carousel Nav Arrows */
+.owl-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  color: black;
+  font-size: 20px;
+}
+.owl-next, .owl-prev{
+  background-color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+.owl-nav button {
+  /* background: #ff4d4d !important; */
+  color: black !important;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 20px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+  background-color: white !important;
+}
+
+.owl-nav button:hover {
+  background: #e63939 !important;
+}
+
+
+.feature {
+  display: flex;
+  flex-direction: row; /* 🔹 icon left, text right */
+  align-items: center;
+  background-color: #f4f6f8;
+  padding: 15px 20px; /* reduced padding */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease-in-out;
+  min-height: 80px; /* 🔹 shorter card height */
+}
+
+.feature:hover {
+  transform: translateY(-3px);
+}
+
+.icon {
+  font-size: 1.8rem;
+  margin-right: 12px; /* space between icon and text */
+  color: #0a3d62;
+}
+
+.feature p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  margin: 0;
+  text-align: start;
+}
+
+/* Portfolio Section Styling */
+.portfolio-section {
+  padding: 60px 20px;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.portfolio-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.portfolio-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.portfolio-item {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.portfolio-info {
+  padding: 20px;
+}
+
+.portfolio-info h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.portfolio-info p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+
+
+@media (max-width: 768px) {
+.treatment-image {
+  flex: 0 0 0px;
+}
+.dr-says{
+  display: none;
+}
+.map-cont{
+  display: none;
+}
+}
+
+      .btn {
+        display: block;
+        width: 100%;
+        padding: 10px 5px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 30px;
+        font-size: 16px;
+        font-weight: 600;
+        text-align: center;
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .call {
+        font-family: "Poppins", sans-serif;
+        display: inline-block;
+        padding: 10px 5px;
+        font-size: 16px;
+        color: #fff;
+        background: linear-gradient(
+          120deg,
+          #005c99 0%,
+          #0078b8 20%,
+          #00cfff 40%,
+          #0078b8 60%,
+          #005c99 80%,
+          #009ef2 100%
+        );
+        background-size: 300% 300%;
+        border: none;
+        border-radius: 30px;
+        text-decoration: none;
+        position: relative;
+        overflow: hidden;
+        animation: metallicShimmer 8s ease-in-out infinite;
+        box-shadow: 0 0 20px rgba(0, 170, 255, 0.4);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .call:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 30px rgba(0, 170, 255, 0.6);
+      }
+
+      .call i {
+        margin-right: 8px;
+      }
+
+      @keyframes metallicShimmer {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      .btn.whatsapp {
+        font-family: "Poppins", sans-serif;
+        display: inline-block;
+        padding: 10px 5px;
+        font-size: 16px;
+        color: #fff;
+        background: linear-gradient(
+          120deg,
+          #1c8100 0%,
+          #27b500 20%,
+          #6aff33 40%,
+          #27b500 60%,
+          #1c8100 80%,
+          #4ccf2e 100%
+        );
+        background-size: 300% 300%;
+        border: none;
+        border-radius: 30px;
+        text-decoration: none;
+        position: relative;
+        overflow: hidden;
+        animation: metallicShimmer 8s ease-in-out infinite;
+        box-shadow: 0 0 20px rgba(76, 207, 46, 0.4);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .btn.whatsapp:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 30px rgba(76, 207, 46, 0.6);
+      }
+
+      .btn.whatsapp i {
+        margin-right: 8px;
+        color: white;
+      }
+
+      /* Shared shimmer animation */
+      @keyframes metallicShimmer {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      .btn i {
+        margin-right: 8px;
+      }

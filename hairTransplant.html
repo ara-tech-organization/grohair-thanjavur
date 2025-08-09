@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced Grohair and Gloskin</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-PWZDNTQG");
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Poppins Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Global site tag (gtag.js) - Google Ads -->
+
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "1053728416846297");
+      fbq("track", "PageView");
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=1053728416846297&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-WXXHQHEZMK"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-WXXHQHEZMK");
+    </script>
+
+    <style>
+      body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        background: url("images/bg.png") no-repeat center center fixed;
+        background-size: cover;
+        overflow-x: hidden;
+        z-index: 0;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed; /* optional if you want it to stay still */
+        height: 100vh;
+      }
+
+      @media (min-width: 768px) {
+        .mobile-only {
+          display: block;
+        }
+      }
+
+      .mobile-only {
+        max-width: 430px;
+        margin: auto;
+        background-color: transparent;
+        padding: 80px 16px 16px; /* leave top padding to account for header height */
+      }
+
+      .header {
+        position: fixed; /* keep it always on top */
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        height: 75px; /* adjust as needed */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 16px;
+        background-color: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* subtle shadow */
+      }
+
+      .header img {
+        width: 100px;
+        height: auto;
+      }
+      .address-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #333;
+        font-size: 12px;
+        line-height: 1.4;
+        font-weight: bold;
+      }
+      .address-container i {
+        font-size: 16px;
+        color: black; /* your brand orange */
+        flex-shrink: 0;
+      }
+
+      .address {
+        font-size: 10px;
+        color: #333;
+        line-height: 1.4;
+      }
+
+      .highlight-text {
+        font-weight: 600;
+        color: #ff0000;
+        margin: 30px 0 10px;
+        font-size: 25px;
+        text-align: center;
+      }
+
+      .bullet-section {
+        list-style: none;
+        padding: 0;
+        margin: 0 auto 16px;
+        width: fit-content;
+        text-align: start;
+      }
+
+      .bullet-section li {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 4px;
+        font-size: 13px;
+        font-weight: bold;
+        color: #000;
+        margin-bottom: 12px;
+      }
+
+      .bullet-section .icon {
+        color: #ff0000;
+      }
+
+      .bullet-section li i {
+        color: #000; /* Orange accent for the icon */
+        font-size: 16px;
+      }
+
+      .call-now {
+        text-align: center;
+        color: #ff6200;
+        font-size: 13px;
+        margin-bottom: 36px;
+      }
+
+      .btn {
+        display: block;
+        width: 100%;
+        padding: 10px 5px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 30px;
+        font-size: 16px;
+        font-weight: 600;
+        text-align: center;
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .call {
+        font-family: "Poppins", sans-serif;
+        display: inline-block;
+        padding: 10px 5px;
+        font-size: 16px;
+        color: #fff;
+        background: linear-gradient(
+          120deg,
+          #005c99 0%,
+          #0078b8 20%,
+          #00cfff 40%,
+          #0078b8 60%,
+          #005c99 80%,
+          #009ef2 100%
+        );
+        background-size: 300% 300%;
+        border: none;
+        border-radius: 30px;
+        text-decoration: none;
+        position: relative;
+        overflow: hidden;
+        animation: metallicShimmer 8s ease-in-out infinite;
+        box-shadow: 0 0 20px rgba(0, 170, 255, 0.4);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .call:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 30px rgba(0, 170, 255, 0.6);
+      }
+
+      .call i {
+        margin-right: 8px;
+      }
+
+      @keyframes metallicShimmer {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      .btn.whatsapp {
+        font-family: "Poppins", sans-serif;
+        display: inline-block;
+        padding: 10px 5px;
+        font-size: 16px;
+        color: #fff;
+        background: linear-gradient(
+          120deg,
+          #1c8100 0%,
+          #27b500 20%,
+          #6aff33 40%,
+          #27b500 60%,
+          #1c8100 80%,
+          #4ccf2e 100%
+        );
+        background-size: 300% 300%;
+        border: none;
+        border-radius: 30px;
+        text-decoration: none;
+        position: relative;
+        overflow: hidden;
+        animation: metallicShimmer 8s ease-in-out infinite;
+        box-shadow: 0 0 20px rgba(76, 207, 46, 0.4);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .btn.whatsapp:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 30px rgba(76, 207, 46, 0.6);
+      }
+
+      .btn.whatsapp i {
+        margin-right: 8px;
+      }
+
+      /* Shared shimmer animation */
+      @keyframes metallicShimmer {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      .btn i {
+        margin-right: 8px;
+      }
+
+      .before-after {
+        display: flex;
+        justify-content: space-between;
+        gap: 8px;
+        margin-top: 16px;
+      }
+
+      .before-after img {
+        width: 48%;
+        border-radius: 10px;
+        object-fit: cover;
+      }
+
+      .icon {
+        color: #fff; /* or any contrasting color */
+        font-size: 18px;
+        margin-right: 8px;
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .carousel-wrapper {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        margin-top: 1rem;
+      }
+
+      .carousel-track {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .carousel-images {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+      }
+
+      .slide {
+        scroll-snap-align: center;
+        flex: 0 0 100%;
+      }
+
+      .carousel-images label {
+        scroll-snap-align: center;
+        flex-shrink: 0;
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .carousel-images img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        object-fit: cover;
+      }
+
+      /* Dots */
+      .dots {
+        display: flex;
+        justify-content: center;
+        gap: 6px;
+        margin-top: 8px;
+      }
+
+      .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #ccc;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+
+      /* Radio buttons (hidden) */
+      input[name="carousel"] {
+        display: none;
+      }
+
+      /* Active dot color */
+      #slide1:checked ~ .dots label[for="slide1"],
+      #slide2:checked ~ .dots label[for="slide2"],
+      #slide3:checked ~ .dots label[for="slide3"],
+      #slide4:checked ~ .dots label[for="slide4"],
+      #slide5:checked ~ .dots label[for="slide5"],
+      #slide6:checked ~ .dots label[for="slide6"],
+      #slide7:checked ~ .dots label[for="slide7"],
+      #slide8:checked ~ .dots label[for="slide8"] {
+        background: linear-gradient(to right, #ff6200, #be0000);
+      }
+
+      #slide1:checked ~ .carousel-images label:nth-child(1),
+      #slide2:checked ~ .carousel-images label:nth-child(2),
+      #slide3:checked ~ .carousel-images label:nth-child(3) {
+        display: block;
+      }
+
+      /* .wrapper {
+  text-align: center;
+}
+
+.rainbow-button {
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  color: #fff;
+  background: linear-gradient(270deg,
+    red, orange, yellow, green, cyan, blue, violet, red);
+  background-size: 600% 600%;
+  animation: rainbowMove 5s ease infinite;
+  box-shadow: 0 0 10px rgba(255,255,255,0.3);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.rainbow-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255,255,255,0.5);
+}
+
+@keyframes rainbowMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+} */
+    </style>
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "1101899361295319");
+      fbq("track", "PageView");
+    </script>
+    <noscript>
+      <img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=1101899361295319&ev=PageView&noscript=1"
+      />
+    </noscript>
+    <!-- End Meta Pixel Code -->
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "1142570597698056");
+      fbq("track", "PageView");
+    </script>
+    <noscript>
+      <img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=1142570597698056&ev=PageView&noscript=1"
+      />
+    </noscript>
+    <!-- End Meta Pixel Code -->
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-PWZDNTQG"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div class="mobile-only">
+      <div class="header">
+        <img src="img/g logo.jpg" alt="Grohair & Gloskin Logo" />
+        <div class="address-container">
+          <i class="fa-solid fa-location-dot"></i>
+          <div class="address">Thanjavur</div>
+        </div>
+      </div>
+
+      <section class="highlight-section">
+        <div class="container">
+          <h2 class="highlight-title">India's No.1 Hair & Skin Treatment</h2>
+
+          <div class="highlight-cards">
+            <!-- Hair Treatments Card -->
+            <div class="highlight-card">
+              <h4>Hair Treatments</h4>
+              <ul>
+                <li>
+                  Hair loss? Dandruff? Get proven treatments for a healthy scalp
+                  & strong growth!
+                </li>
+                <li>
+                  Stop hair thinning & control dandruff – Advanced solutions for
+                  every hair concern!
+                </li>
+              </ul>
+            </div>
+
+            <!-- Skin Treatments Card -->
+            <div class="highlight-card">
+              <h4>Skin Treatments</h4>
+              <ul>
+                <li>
+                  Dull skin, acne, or tanning? Reveal your natural glow with our
+                  expert care!
+                </li>
+                <li>
+                  Clear acne, remove tan, brighten skin – See visible results in
+                  weeks!
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- <ul class="bullet-section ">
+
+      </ul> -->
+
+      <!-- <div class="wrapper">
+    <button class="rainbow-button">
+      Press ♥ to Continue
+    </button>
+  </div> -->
+
+      <a
+        href="tel:+9108098756789"
+        class="btn call"
+        onclick="gtag_report_conversion();"
+      >
+        <i class="fa-solid fa-phone"></i>Call
+      </a>
+
+      <a
+        href="https://wa.me/918098756789
+"
+        class="btn whatsapp"
+      >
+        <i class="fab fa-whatsapp icon"></i>Whatsapp
+      </a>
+      <div class="call-now">
+        Call or WhatsApp Now for all the info you need!
+      </div>
+      <div class="carousel-wrapper">
+        <div class="carousel-track" id="carousel-track">
+          <input type="radio" name="carousel" id="slide1" checked />
+          <input type="radio" name="carousel" id="slide2" />
+          <input type="radio" name="carousel" id="slide3" />
+          <input type="radio" name="carousel" id="slide4" />
+          <input type="radio" name="carousel" id="slide5" />
+          <input type="radio" name="carousel" id="slide6" />
+          <input type="radio" name="carousel" id="slide7" />
+          <input type="radio" name="carousel" id="slide8" />
+
+          <div class="carousel-images">
+            <div class="slide">
+              <img src="img/01.jpg" alt="Slide 1" />
+            </div>
+            <div class="slide">
+              <img src="img/02.jpg" alt="Slide 2" />
+            </div>
+            <div class="slide">
+              <img src="img/03.jpg" alt="Slide 3" />
+            </div>
+            <div class="slide">
+              <img src="img/04.jpg" alt="Slide 4" />
+            </div>
+            <div class="slide">
+              <img src="img/05.jpg" alt="Slide 4" />
+            </div>
+            <div class="slide">
+              <img src="img/09.jpg" alt="Slide 4" />
+            </div>
+            <div class="slide">
+              <img src="img/07.jpg" alt="Slide 4" />
+            </div>
+            <div class="slide">
+              <img src="img/08.jpg" alt="Slide 4" />
+            </div>
+          </div>
+
+          <div class="dots">
+            <label for="slide1" class="dot"></label>
+            <label for="slide2" class="dot"></label>
+            <label for="slide3" class="dot"></label>
+            <label for="slide4" class="dot"></label>
+            <label for="slide5" class="dot"></label>
+            <label for="slide6" class="dot"></label>
+            <label for="slide7" class="dot"></label>
+            <label for="slide8" class="dot"></label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const radios = document.querySelectorAll('input[name="carousel"]');
+      const track = document.querySelector(".carousel-images");
+      const slides = document.querySelectorAll(".slide");
+
+      function scrollToSlide(index) {
+        const slide = slides[index];
+        if (!slide) return;
+        track.scrollTo({
+          left: slide.offsetLeft,
+          behavior: "smooth",
+        });
+      }
+
+      radios.forEach((radio, index) => {
+        radio.addEventListener("change", () => {
+          scrollToSlide(index);
+        });
+      });
+
+      let debounceTimer;
+      track.addEventListener("scroll", () => {
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(() => {
+          const scrollLeft = track.scrollLeft;
+          const slideWidth = slides[0].offsetWidth;
+          const index = Math.round(scrollLeft / slideWidth);
+
+          if (radios[index] && !radios[index].checked) {
+            radios[index].checked = true;
+          }
+        }, 100); // Slight delay for smoother detection
+      });
+
+      // 💫 Auto-scroll using change event
+      let current = 0;
+      setInterval(() => {
+        current = (current + 1) % radios.length;
+        radios[current].click(); // triggers scroll + dot update
+      }, 5000);
+    </script>
+  </body>
+</html>
