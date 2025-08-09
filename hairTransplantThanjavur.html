@@ -302,7 +302,7 @@
 
     <section class="ht-section">
       <div class="container">
-        <h1 class="section-title">Hair Transplant (HT)</h1>
+        <h1 class="section-title">Hair Transplant</h1>
         <p class="intro-text">
           Hair transplant is a safe, effective, and permanent solution for hair
           loss. It involves transferring healthy hair from a donor area to
@@ -313,8 +313,6 @@
           boosts self-confidence.
         </p>
 
-        <h2 class="treatment-heading">Treatment Types</h2>
-
         <div class="treatment-box">
           <div class="treatment-image">
             <img
@@ -323,6 +321,7 @@
             />
           </div>
           <div class="treatment-content">
+            <h2 class="treatment-heading">Treatment Types</h2>
             <h3>Follicular Unit Transplantation (FUT)</h3>
             <ul>
               <li>
@@ -340,13 +339,6 @@
                 hair growth.
               </li>
             </ul>
-            <a
-              href="#appointmentForm"
-              class="btn btn-primary btn-block"
-              style="height: 47px"
-            >
-              Apply Now
-            </a>
           </div>
         </div>
 
@@ -374,17 +366,89 @@
                 few days.
               </li>
             </ul>
-            <a
-              href="#appointmentForm"
-              class="btn btn-primary btn-block"
-              style="height: 47px"
-            >
-              Apply Now
-            </a>
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+          "
+        >
+          <a href="#appointmentForm" class="btn btn-primary same-width-btn">
+            Book an appointment
+          </a>
+          <a href="tel:+918098756789" class="btn btn-primary same-width-btn">
+            Call Now
+          </a>
+        </div>
+
+        <style>
+          .same-width-btn {
+            height: 47px;
+            width: 200px; /* adjust as needed */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 5px;
+          }
+        </style>
+      </div>
+    </section>
+    <!-- Before and After Section Start -->
+    <div class="container-fluid my-5" data-aos="fade-up">
+      <h2 class="text-center">
+        <span class="text-primary">Before</span> &
+        <span class="text-primary">After</span> Results
+      </h2>
+      <div class="row mt-5">
+        <div class="owl-carousel img-carousel">
+          <div class="img-item m-2">
+            <img
+              src="img/b-a-01.jpg"
+              class="img-fluid gro-img-radius"
+              alt="gro-hair-glo-skin-thanjavur"
+              loading="lazy"
+            />
+          </div>
+          <div class="img-item m-2">
+            <img
+              src="img/b-a-02.jpg"
+              class="img-fluid gro-img-radius"
+              alt="gro-hair-glo-skin-thanjavur"
+              loading="lazy"
+            />
+          </div>
+          <div class="img-item m-2">
+            <img
+              src="img/b-a-03.jpg"
+              class="img-fluid gro-img-radius"
+              alt="gro-hair-glo-skin-thanjavur"
+              loading="lazy"
+            />
+          </div>
+          <div class="img-item m-2">
+            <img
+              src="img/b-a-04.jpg"
+              class="img-fluid gro-img-radius"
+              alt="gro-hair-glo-skin-thanjavur"
+              loading="lazy"
+            />
+          </div>
+          <div class="img-item m-2">
+            <img
+              src="img/b-a-05.jpg"
+              class="img-fluid gro-img-radius"
+              alt="gro-hair-glo-skin-thanjavur"
+              loading="lazy"
+            />
           </div>
         </div>
       </div>
-    </section>
+    </div>
+    <!-- Before and After Secrion End -->
     <div class="container-fluid" data-aos="fade-up">
       <div class="container py-5">
         <div class="row">
@@ -411,6 +475,7 @@
               <h2 class="mb-4">Contact For Any Query</h2>
               <div id="success"></div>
               <form id="appointmentForm">
+                <!-- Name & Phone -->
                 <div class="form-row">
                   <div class="col-sm-6">
                     <input
@@ -424,18 +489,6 @@
                   </div>
                   <div class="col-sm-6">
                     <input
-                      type="email"
-                      name="email"
-                      class="form-control bg-transparent p-4"
-                      style="height: 47px; color: #4b4b4b"
-                      placeholder="Your Email"
-                      required
-                    />
-                  </div>
-                </div>
-                <div class="form-row mt-3">
-                  <div class="col-sm-6">
-                    <input
                       type="text"
                       name="phone"
                       class="form-control bg-transparent p-4"
@@ -444,46 +497,36 @@
                       required
                     />
                   </div>
-                  <div class="col-sm-6">
-                    <input
-                      type="date"
-                      name="date"
-                      class="form-control bg-transparent p-4"
-                      style="height: 47px; color: grey !important"
-                      required
-                    />
-                  </div>
                 </div>
+
+                <!-- Location -->
                 <div class="form-row mt-3">
-                  <div class="col-sm-6">
+                  <div class="col-sm-12">
                     <input
-                      type="time"
-                      name="time"
+                      type="text"
+                      name="location"
                       class="form-control bg-transparent p-4"
-                      style="height: 47px; color: grey !important"
+                      style="height: 47px; color: #4b4b4b"
+                      placeholder="Your Location"
                       required
                     />
                   </div>
-                  <div class="col-sm-6">
-                    <select
-                      name="service"
-                      id="service"
-                      class="custom-select bg-transparent px-4"
-                      style="height: 47px; color: gray"
+                </div>
+
+                <!-- Message -->
+                <div class="form-row mt-3">
+                  <div class="col-sm-12">
+                    <textarea
+                      name="message"
+                      class="form-control bg-transparent p-4"
+                      style="height: 120px; color: #4b4b4b; resize: none"
+                      placeholder="Your Message"
                       required
-                    >
-                      <option value="" disabled selected>
-                        Select Treatment
-                      </option>
-                      <option style="color: black" value="Hair Treatment">
-                        Hair Treatment
-                      </option>
-                      <option style="color: black" value="Skin Treatment">
-                        Skin Treatment
-                      </option>
-                    </select>
+                    ></textarea>
                   </div>
                 </div>
+
+                <!-- Submit Button -->
                 <div class="form-row mt-4">
                   <div class="col-sm-6">
                     <button
@@ -492,7 +535,7 @@
                       id="submitBtn"
                       style="height: 47px"
                     >
-                      Book Appointment
+                      Send Message
                     </button>
                   </div>
                 </div>
@@ -505,7 +548,10 @@
 
     <section class="highlight-section">
       <div class="container">
-        <h2 class="highlight-title">India's No.1 Hair & Skin Treatment</h2>
+        <h2 class="highlight-title">
+          India's No.1 <br />
+          Hair & Skin Treatment
+        </h2>
         <!-- <div class="highlight-description">
 
           <h4>Hair Treatments</h4>
@@ -567,59 +613,6 @@
       </div>
     </section>
 
-    <!-- Before and After Section Start -->
-    <div class="container-fluid my-5" data-aos="fade-up">
-      <h2 class="text-center">
-        <span class="text-primary">Before</span> &
-        <span class="text-primary">After</span> Results
-      </h2>
-      <div class="row mt-5">
-        <div class="owl-carousel img-carousel">
-          <div class="img-item m-2">
-            <img
-              src="img/b-a-01.jpg"
-              class="img-fluid gro-img-radius"
-              alt="gro-hair-glo-skin-thanjavur"
-              loading="lazy"
-            />
-          </div>
-          <div class="img-item m-2">
-            <img
-              src="img/b-a-02.jpg"
-              class="img-fluid gro-img-radius"
-              alt="gro-hair-glo-skin-thanjavur"
-              loading="lazy"
-            />
-          </div>
-          <div class="img-item m-2">
-            <img
-              src="img/b-a-03.jpg"
-              class="img-fluid gro-img-radius"
-              alt="gro-hair-glo-skin-thanjavur"
-              loading="lazy"
-            />
-          </div>
-          <div class="img-item m-2">
-            <img
-              src="img/b-a-04.jpg"
-              class="img-fluid gro-img-radius"
-              alt="gro-hair-glo-skin-thanjavur"
-              loading="lazy"
-            />
-          </div>
-          <div class="img-item m-2">
-            <img
-              src="img/b-a-05.jpg"
-              class="img-fluid gro-img-radius"
-              alt="gro-hair-glo-skin-thanjavur"
-              loading="lazy"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Before and After Secrion End -->
-
     <!-- Video Start -->
     <!-- Section Heading -->
     <div
@@ -649,40 +642,50 @@
               </div>
               <div class="owl-carousel pricing-carousel">
                 <div class="bg-transparent">
-                  <video
+                  <iframe
+                    src="https://www.instagram.com/reel/DDrb_GnNAqF/embed"
                     width="300"
                     height="490"
-                    controls
+                    frameborder="0"
+                    scrolling="no"
+                    allowtransparency="true"
                     style="border-radius: 10px; background: black"
-                    preload="metadata"
-                  >
-                    <source src="img/vdos/CHS Dr.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
+                  ></iframe>
                 </div>
 
                 <div class="bg-transparent">
-                  <video
+                  <iframe
+                    src="https://www.instagram.com/reel/DFXnszeyq1l/embed"
                     width="300"
                     height="490"
-                    controls
+                    frameborder="0"
+                    scrolling="no"
+                    allowtransparency="true"
                     style="border-radius: 10px; background: black"
-                    preload="metadata"
-                  >
-                    <source src="img/vdos/CHS.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
+                  ></iframe>
+                </div>
+
+                <div class="bg-transparent">
+                  <iframe
+                    src="https://www.instagram.com/reel/DI3mi5ro4oH/embed"
+                    width="300"
+                    height="490"
+                    frameborder="0"
+                    scrolling="no"
+                    allowtransparency="true"
+                    style="border-radius: 10px; background: black"
+                  ></iframe>
                 </div>
               </div>
 
               <!-- Instagram Button -->
               <div class="text-center mt-4">
                 <a
-                  href="https://youtube.com/@adgrohairgloskinthanjavur?si=ILHvN6GmUzE0wc9m"
+                  href=""
                   target="_blank"
                   class="btn btn-primary px-4 py-2"
                 >
-                  Stay Connected with Us on YouTube
+                  Stay Connected with Us on Instagram
                 </a>
               </div>
             </div>
@@ -849,7 +852,7 @@
             target="_blank"
             class="btn btn-primary px-4 py-2"
           >
-            Share Your Experience – Leave a Review
+           Google Review
           </a>
         </div>
       </div>
@@ -860,7 +863,7 @@
 
     <section class="portfolio-section">
       <div class="container">
-        <h2 class="portfolio-title">Expert Portfolio</h2>
+        <h2 class="portfolio-title">Our Faculties</h2>
         <p class="portfolio-subtitle">
           Showcasing the skills, expertise, and achievements that set you apart.
         </p>
@@ -956,7 +959,7 @@
               </h2>
             </a>
             <h5 style="color: white" class="text-uppercase mb-3">
-              Our Location
+              Clinic Location
             </h5>
             <p>
               <i class="fa fa-map-marker-alt mr-2"></i>
@@ -1019,32 +1022,26 @@
           submitBtn.disabled = true;
           submitBtn.textContent = "Please wait...";
 
-          const name = document
+          const Name = document
             .querySelector('input[name="name"]')
-            .value.trim();
-          const email = document
-            .querySelector('input[name="email"]')
             .value.trim();
           const mobile = document
             .querySelector('input[name="phone"]')
             .value.trim();
-          const date = document
-            .querySelector('input[name="date"]')
+          const location = document
+            .querySelector('input[name="location"]')
             .value.trim();
-          const time = document
-            .querySelector('input[name="time"]')
+          const message = document
+            .querySelector('textarea[name="message"]')
             .value.trim();
-          const treatment = document.querySelector(
-            'select[name="service"]'
-          ).value;
 
-          const formData = { name, email, mobile, date, time, treatment };
+          const formData = { Name, mobile, location, message };
 
           console.log("📦 Sending this data:", formData);
 
           try {
             const res = await fetch(
-              "https://schoolcommunication-gmdtekepd3g3ffb9.canadacentral-01.azurewebsites.net/api/postMSMSForm/growAndGlowNewForm",
+              "https://schoolcommunication-gmdtekepd3g3ffb9.canadacentral-01.azurewebsites.net/api/postMSMSForm/growHairGlowSkinAppoinment",
               {
                 method: "POST",
                 headers: {
@@ -1095,7 +1092,7 @@
             }).showToast();
           } finally {
             submitBtn.disabled = false;
-            submitBtn.textContent = "Book Appointment";
+            submitBtn.textContent = "Send Message";
           }
         });
     </script>

@@ -20489,7 +20489,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
 .intro-text {
   font-size: 1.1rem;
-  text-align: center;
+  text-align: start;
   max-width: 900px;
   margin: 0 auto 40px auto;
   line-height: 1.6;
@@ -20500,7 +20500,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   font-size: 2rem;
   margin-bottom: 40px;
   color: #0a3d62;
-  text-align: center;
+  text-align: start;
 }
 
 /* Treatment Boxes */
@@ -20708,7 +20708,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
 /* Portfolio Section Styling */
 .portfolio-section {
-  padding: 60px 20px;
+  padding: 0px 20px;
   background-color: #f8f9fa;
   text-align: center;
 }
