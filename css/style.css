@@ -20467,6 +20467,42 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
 }
 
+.highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px; /* smaller gap for compact look */
+  justify-items: stretch;
+  align-items: stretch;
+}
+
+.feature {
+  display: flex;
+  flex-direction: row; /* 🔹 icon left, text right */
+  align-items: center;
+  background-color: #f4f6f8;
+  padding: 15px 20px; /* reduced padding */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease-in-out;
+  min-height: 80px; /* 🔹 shorter card height */
+}
+
+.feature:hover {
+  transform: translateY(-3px);
+}
+
+.icon {
+  font-size: 1.8rem;
+  margin-right: 12px; /* space between icon and text */
+  color: #0a3d62;
+}
+
+.feature p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  margin: 0;
+}
 
 
 /* HT Section */
