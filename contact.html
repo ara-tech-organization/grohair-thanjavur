@@ -332,8 +332,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <input type="date" name="date" id="apptDate" class="form-control bg-transparent p-4" style="height: 47px; color: grey !important" required />
               </div>
               <div class="col-sm-6" id="slotRow">
-                <select name="time" id="selectedSlot" class="custom-select bg-transparent px-4" style="height: 47px; color: gray;" required disabled>
-                  <option value="" disabled selected>Select Date First</option>
+                <select name="time" id="selectedSlot" class="custom-select bg-transparent px-4" style="height: 47px; color: gray;" required>
+                  <option value="" disabled selected>Select Time Slot</option>
                 </select>
                 <small id="slotError" style="color:#dc3545; display:none;">Please select a time slot.</small>
               </div>
@@ -341,8 +341,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="form-row mt-3">
               <div class="col-12">
                 <div class="d-flex align-items-center" style="gap:10px;">
-                  <canvas id="captchaCanvas" width="140" height="45" style="border:1px solid rgba(255,255,255,0.3);border-radius:4px;cursor:pointer;" title="Click to refresh"></canvas>
-                  <input type="text" id="captchaInput" class="form-control bg-transparent" placeholder="Enter code" autocomplete="off" required style="height:45px;color:#fff;flex:1;" />
+                  <canvas id="captchaCanvas" width="140" height="45" style="border:1px solid rgba(0,0,0,0.15);border-radius:4px;cursor:pointer;background:#fff;" title="Click to refresh"></canvas>
+                  <input type="text" id="captchaInput" class="form-control bg-transparent" placeholder="Enter code" autocomplete="off" required style="height:45px;color:#4b4b4b;flex:1;" />
                 </div>
                 <small id="captchaError" style="color:#ff6b6b;display:none;">Incorrect captcha. Please try again.</small>
               </div>
@@ -532,14 +532,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     const canvas = document.getElementById("captchaCanvas");
     const ctx = canvas.getContext("2d");
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = "#1a1a2e";
+    ctx.fillStyle = "#f7f2f0";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     for (let i = 0; i < 30; i++) {
-      ctx.fillStyle = "rgba(255,255,255," + (Math.random() * 0.3) + ")";
+      ctx.fillStyle = "rgba(0,0,0," + (Math.random() * 0.15) + ")";
       ctx.fillRect(Math.random() * canvas.width, Math.random() * canvas.height, 2, 2);
     }
     for (let i = 0; i < 3; i++) {
-      ctx.strokeStyle = "rgba(255,255,255,0.15)";
+      ctx.strokeStyle = "rgba(0,0,0,0.12)";
       ctx.beginPath();
       ctx.moveTo(Math.random() * canvas.width, Math.random() * canvas.height);
       ctx.lineTo(Math.random() * canvas.width, Math.random() * canvas.height);
@@ -547,8 +547,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }
     for (let i = 0; i < captchaText.length; i++) {
       ctx.save();
-      ctx.font = (20 + Math.random() * 6) + "px monospace";
-      ctx.fillStyle = ["#ff6b6b","#ffd93d","#6bcb77","#4d96ff","#ff922b"][i % 5];
+      ctx.font = "bold " + (20 + Math.random() * 6) + "px monospace";
+      ctx.fillStyle = ["#ec2024","#2b2b2b","#7a1f1f","#4b4b4b","#a3161a"][i % 5];
       ctx.translate(18 + i * 24, 30 + (Math.random() * 8 - 4));
       ctx.rotate((Math.random() - 0.5) * 0.4);
       ctx.fillText(captchaText[i], 0, 0);
@@ -671,9 +671,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           "3 PM - 4 PM", "4 PM - 5 PM", "5 PM - 6 PM", "6 PM - 7 PM"
         ];
 
-        document.getElementById("apptDate").addEventListener("change", function() {
+        function loadSlots() {
           const slotSelect = document.getElementById("selectedSlot");
-          slotSelect.innerHTML = '<option value="" disabled selected>Select Slot</option>';
+          slotSelect.innerHTML = '<option value="" disabled selected>Select Time Slot</option>';
           allSlots.forEach(function(slot) {
             const opt = document.createElement("option");
             opt.value = slot;
@@ -682,7 +682,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           });
           slotSelect.disabled = false;
           slotSelect.style.color = "gray";
-        });
+        }
+
+        document.getElementById("apptDate").addEventListener("change", loadSlots);
+        loadSlots();
 
         document.getElementById("service").addEventListener("change", function() {
           this.style.color = this.value ? "#4b4b4b" : "gray";
