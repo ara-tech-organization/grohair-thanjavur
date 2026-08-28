@@ -2,6 +2,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Consent Mode defaults (Advanced GroHair & GloSkin) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'functionality_storage': 'granted',
+    'security_storage': 'granted',
+    'wait_for_update': 500
+  });
+</script>
+<!-- End Consent Mode defaults -->
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -85,6 +100,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         "script",
         "https://connect.facebook.net/en_US/fbevents.js"
       );
+      fbq('consent', 'revoke');
       fbq("init", "1101899361295319");
       fbq("track", "PageView");
     </script>
@@ -147,5 +163,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="/" class="thank-btn">Back to Home</a>
     </div>
   </div>
-</body>
+<script src="js/cookie-consent.js" defer></script>
+  </body>
 </html>

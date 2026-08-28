@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
+<!-- Consent Mode defaults (Advanced GroHair & GloSkin) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'functionality_storage': 'granted',
+    'security_storage': 'granted',
+    'wait_for_update': 500
+  });
+</script>
+<!-- End Consent Mode defaults -->
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -109,6 +124,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         "script",
         "https://connect.facebook.net/en_US/fbevents.js"
       );
+      fbq('consent', 'revoke');
       fbq("init", "1101899361295319");
       fbq("track", "PageView");
     </script>
@@ -394,7 +410,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                </div>
                <div class="col-lg-6 pl-lg-5">
                   <div class="row">
-                     <div class="col-sm-6 mb-5">
+                     <div class="col-sm-6 col-lg-6 mb-4">
                         <h5 class="text-white text-uppercase mb-4">Quick Links</h5>
                         <div class="d-flex flex-column justify-content-start">
                            <a class="text-white-50 mb-2" href="index.html"
@@ -411,24 +427,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                               >
                         </div>
                      </div>
-                     <div class="col-sm-6 mb-5">
-                        <h5 class="text-white text-uppercase mb-4">USEFUL LINKS</h5>
-                        <div class="d-flex flex-column justify-content-start">
-                           <a class="text-white-50 mb-2" href="index.html#Testimonials"
-                              ><i class="fa fa-angle-right mr-2"></i>Testimonials</a
-                              >
-                           <a class="text-white-50 mb-2" href="appointment.html"
-                              ><i class="fa fa-angle-right mr-2"></i>Book Appointment</a
-                              >
-                           <a class="text-white-50 mb-2" href="#skin"
-                              ><i class="fa fa-angle-right mr-2"></i>Skin Treatments</a
-                              >
-                           <a class="text-white-50 mb-2" href="#hair"
-                              ><i class="fa fa-angle-right mr-2"></i>Hair Treatments</a
-                              >
-                        </div>
+                     <div class="col-sm-6 col-lg-6 mb-4">
+                       <h5 class="text-white text-uppercase mb-4">Legal</h5>
+                       <div class="d-flex flex-column justify-content-start">
+                         <a class="text-white-50 mb-2 text-nowrap" href="terms-conditions.html"><i class="fa fa-angle-right mr-2"></i>Terms &amp; Conditions</a>
+                         <a class="text-white-50 mb-2 text-nowrap" href="privacy-policy.html"><i class="fa fa-angle-right mr-2"></i>Privacy Policy</a>
+                         <a class="text-white-50 mb-2 text-nowrap" href="refund-cancellation-policy.html"><i class="fa fa-angle-right mr-2"></i>Refund &amp; Cancellation Policy</a>
+                         <a class="text-white-50" href="cookie-policy.html"><i class="fa fa-angle-right mr-2"></i>Cookie Policy</a>
+                       </div>
                      </div>
-                     <div class="d-flex justify-content-start mt-4 ml-3">
+                     <div class="d-flex justify-content-start mt-2 ml-3">
                         <a
                            class="btn btn-lg btn-primary btn-lg-square mr-2"
                            href="https://www.facebook.com/adgrohairgloskinthanjavur"
@@ -716,5 +724,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <script>
         AOS.init();
       </script>
-   </body>
+   <script src="js/cookie-consent.js" defer></script>
+  </body>
 </html>

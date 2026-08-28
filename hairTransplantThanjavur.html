@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+<!-- Consent Mode defaults (Advanced GroHair & GloSkin) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'functionality_storage': 'granted',
+    'security_storage': 'granted',
+    'wait_for_update': 500
+  });
+</script>
+<!-- End Consent Mode defaults -->
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -129,6 +144,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         "script",
         "https://connect.facebook.net/en_US/fbevents.js"
       );
+      fbq('consent', 'revoke');
       fbq("init", "1101899361295319");
       fbq("track", "PageView");
     </script>
@@ -958,6 +974,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       style="border-color: rgba(256, 256, 256, 0.15) !important"
     >
       <div class="container text-center">
+        <div class="mb-2 pb-2" style="border-bottom: 1px solid rgba(255,255,255,0.15)">
+          <a class="text-white-50 mx-2" href="privacy-policy.html">Privacy Policy</a>
+          <a class="text-white-50 mx-2" href="terms-conditions.html">Terms &amp; Conditions</a>
+          <a class="text-white-50 mx-2" href="refund-cancellation-policy.html">Refund &amp; Cancellation Policy</a>
+          <a class="text-white-50 mx-2" href="about.html">About Us</a>
+          <a class="text-white-50 mx-2" href="cookie-policy.html">Cookie Policy</a>
+        </div>
         <p class="m-0 text-white">
           &copy;
           <a href="index.html" class="text-primary">Grohair & GloSkin</a>. All
@@ -1178,5 +1201,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <script>
       AOS.init();
     </script>
+  <script src="js/cookie-consent.js" defer></script>
   </body>
 </html>
